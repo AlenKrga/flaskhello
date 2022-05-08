@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Say Hello</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img src="https://www.pikpng.com/pngl/b/577-5777208_hello-transparent-tumblr-sign-clipart.png">
+        <br>
+        <form action="greet" method="post">
+            {% for message in get_flashed_messages()%}
+                    <h1><p>{{message}}</p></h1>
+            {% endfor %}
+            <br>
+            <input type="text" name="name_input">
+            <br>
+            <input type="submit" value="GREET" id="greet">
+        </form>
+    </body>
+</html>

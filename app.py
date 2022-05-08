@@ -6,7 +6,7 @@ app.secret_key = "nestototalnorandom"
 
 @app.route("/hello")
 def index():
-    flash("enter your name: ")
+    flash(" enter your name: ")
     return render_template("index.html")
 
 @app.route("/greet", methods=["POST", "GET"])
